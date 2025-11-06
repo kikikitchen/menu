@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiki's Kitchen</title>
+    <link rel="icon" href="logo.png" type="image/x-icon">
+    <link href="./bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        .menu-item-img {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        /* Styling for the banner image */
+        .banner-hero {
+            background: url('banner.png') no-repeat center center;
+            background-size: cover;
+            height: 550px; /* Adjust height as needed */
+            color: white; /* Ensure text is visible over the background */
+            position: relative;
+        }
+        .banner-overlay {
+            /* A semi-transparent overlay to make text pop */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4); /* Dark overlay */
+        }
+        .banner-content {
+            position: relative;
+            z-index: 10;
+        }
+        .navbar-brand img {
+            width: 40px; 
+            height: 40px; 
+            object-fit: contain; 
+            margin-right: 8px;
+            border-radius: 50%; 
+            border: 2px solid white;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <!-- <a class="navbar-brand" href="#">Kiki's Kitchen</a> -->
+            <a class="navbar-brand" href="#">
+                <img src="logo.png" alt="Kiki's Kitchen's Logo" class="d-inline-block align-text-top">
+                Kiki's Kitchen
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#kimbap">Kimbap</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sandwich">Sandwich</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#chicken">Korean Fried Chicken</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- <header class="bg-light text-center py-5 border-bottom">
+        <div class="container">
+            <h1 class="display-4 text-primary">Kiki's Menu</h1>
+            <p class="lead">Served with love from Kiki's Kitchen &hearts;</p>
+        </div>
+    </header> -->
+<header class="banner-hero d-flex align-items-center justify-content-center text-center">
+        <div class="banner-overlay"></div>
+        <div class="container banner-content">
+            <h1 class="display-1 fw-bold">Kiki's Menu</h1>
+            <p class="lead">Served with love from Kiki's Kitchen &hearts;</p>
+            <a href="#kimbap" class="btn btn-warning btn-lg mt-3">View Menu</a>
+        </div>
+    </header>
+    <section id="kimbap" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Kimbap</h2>
+            
+            <div class="row row-cols-2 row-cols-md-2 row-cols-lg-3 g-4">
+                
+                <div class="col">
+                    <div class="card shadow-sm h-100">
+                        <img src="menu_kimbap.jpg" class="card-img-top menu-item-img" alt="Original Kimbap">
+                        <div class="card-body">
+                            <h5 class="card-title">Original Kimbap</h5>
+                            <p class="card-text">Chicken ham, burdock, yellow-pickled radish, cucumber, carrot and egg</p>
+                            <p class="text-end fw-bold text-success">$7.90</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card shadow-sm h-100">
+                        <img src="menu_kimbap.jpg" class="card-img-top menu-item-img" alt="Cheese Kimbap">
+                        <div class="card-body">
+                            <h5 class="card-title">Cheese Kimbap</h5>
+                            <p class="card-text">Cheese,surdock, yellow-pickled radish, cucumber, carrot, egg and red cabbage</p>
+                            <p class="text-end fw-bold text-success">$7.90</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card shadow-sm h-100">
+                        <img src="menu_kimbap.jpg" class="card-img-top menu-item-img" alt="Kimchi Kimbap">
+                        <div class="card-body">
+                            <h5 class="card-title">Kimchi Kimbap</h5>
+                            <p class="card-text">Kimchi, lettuce, burdock, yellow-pickled radish, cucumber, carrot and egg</p>
+                            <p class="text-end fw-bold text-success">$8.90</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card shadow-sm h-100">
+                        <img src="menu_kimbap.jpg" class="card-img-top menu-item-img" alt="Crab Mayo Kimbap">
+                        <div class="card-body">
+                            <h5 class="card-title">Crab Mayo Kimbap</h5>
+                            <p class="card-text">Crab stick, pickled radish, burdock, cucumber, carrot, egg and red cabbage</p>
+                            <p class="text-end fw-bold text-success">$8.90</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card shadow-sm h-100">
+                        <img src="menu_kimbap.jpg" class="card-img-top menu-item-img" alt="Original Kimbap">
+                        <div class="card-body">
+                            <h5 class="card-title">Mentaiko Kimbap <span class="badge bg-danger">NEW</span></h5>
+                            <p class="card-text">Mentaiko Mayo,surdock, yellow-pickled radish, cucumber, carrot, egg and red cabbage</p>
+                            <p class="text-end fw-bold text-success">$8.90</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section id="sandwich" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Sandwich</h2>
+            
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                
+                <div class="col">
+                    <div class="card shadow-sm h-100">
+                        <img src="menu_eggdrop.jpg" class="card-img-top menu-item-img" alt="Eggdrop Sandwich">
+                        <div class="card-body">
+                            <h5 class="card-title">Eggdrop Sandwich</h5>
+                            <p class="card-text">Thick milk bread stuffed with fluffy scrambled eggs and cheese</p>
+                            <p class="text-end fw-bold text-success">$5.90</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card shadow-sm h-100">
+                        <img src="menu_eggdrop.jpg" class="card-img-top menu-item-img" alt="Eggdrop Sandwich w Fish Fillet">
+                        <div class="card-body">
+                            <h5 class="card-title">Eggdrop Sandwich w Fish Fillet</h5>
+                            <p class="card-text">Thick milk bread stuffed with fluffy scrambled eggs, cheese and fish fillet</p>
+                            <p class="text-end fw-bold text-success">$6.90</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section id="chicken" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Korean Fried Chicken</h2>
+            
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                
+                <div class="col">
+                    <div class="card shadow-sm h-100">
+                        <img src="menu_kfc.jpg" class="card-img-top menu-item-img" alt="Korean Fried Chicken 3pc">
+                        <div class="card-body">
+                            <h5 class="card-title">Korean Fried Chicken - 3pc</h5>
+                            <p class="card-text">Korean-style fried chicken in sweet and spicy sauce</p>
+                            <p class="text-end fw-bold text-success">$4.90</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card shadow-sm h-100">
+                        <img src="menu_kfc.jpg" class="card-img-top menu-item-img" alt="Korean Fried Chicken 6pc">
+                        <div class="card-body">
+                            <h5 class="card-title">Korean Fried Chicken - 6pc</h5>
+                            <p class="card-text">Korean-style fried chicken in sweet and spicy sauce</p>
+                            <p class="text-end fw-bold text-success">$7.90</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p class="mb-0">&copy; 2025 Kiki's Kitchen</a></p>
+    </footer>
+
+    <script src="./bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
